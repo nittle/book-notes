@@ -15,6 +15,11 @@ async function getRecords() {
   const records = (await db.query("SELECT * FROM record")).rows;
   return records;
 }
+async function getRecordById(id) {
+  const records = (await db.query("SELECT * FROM record")).rows;
+  const record = records.find((record) => record.id === id);
+  return record;
+}
 
 app.use(e.static("public"));
 
@@ -23,6 +28,16 @@ app.get("/", async (req, res) => {
   res.render("index.ejs", {
     records: records,
   });
+});
+
+app.get("/:id", async (req, res) => {
+  const id = parseInt(req.params.id);
+  const record = await getRecordById(id);
+  console.log(record);
+
+  console.log(id);
+  if (record) res.render("book.ejs", { record: record });
+  else res.sendStatus(404);
 });
 
 app.listen(port, () => {

@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs"); %>
+
+    <div class="book-container">
+        <h2 class="book-title"><%= record.title %></h2>
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/<%= record.isbn %>-L.jpg" alt="<%= record.title %> cover"/>
+        <h3 class="book-mark">My mark is <%= record.mark %>/10</h3>
+        <p class="book-note"><%= record.note %></p>
+    </div>
+
+  </body>
+</html>

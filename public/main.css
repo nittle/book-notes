@@ -59,3 +59,29 @@
   border-bottom: 0;
   grid-area: description;
 }
+
+/* Styles for book pages */
+.book-container {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 0 10%;
+  display: grid;
+  grid-template: 1fr 1fr 3fr / 1fr 1fr;
+  grid-template-areas:
+    "cover title"
+    "cover mark"
+    "note note";
+}
+.book-cover {
+  justify-self: center;
+  grid-area: cover;
+}
+.book-title {
+  grid-area: title;
+}
+.book-mark {
+  grid-area: mark;
+}
+.book-note {
+  grid-area: note;
+}
