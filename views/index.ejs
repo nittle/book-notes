@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book notes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <section id="header">
-      <h2><a href="/">Books I`ve read</a></h2>
-      <form action="/search" method="post">
-        <input type="text" />
-        <input type="submit" value="GO" />
-      </form>
-      <hr />
-    </section>
+<%- include("partials/header.ejs"); %>
+
     <section id="cards">
       <% records.forEach(record => { %>
       <div class="card-container">
