@@ -62,26 +62,44 @@
 
 /* Styles for book pages */
 .book-container {
+  padding: 10px;
+  font-family: "Playfair Display", serif;
   border: 2px solid black;
   border-radius: 10px;
   margin: 0 10%;
   display: grid;
-  grid-template: 1fr 1fr 3fr / 1fr 1fr;
+  grid-template: auto 3fr / auto 1fr;
   grid-template-areas:
-    "cover title"
-    "cover mark"
+    "cover details"
     "note note";
 }
 .book-cover {
+  /* width: fit-content; */
+  width: 100px;
+  height: auto;
   justify-self: center;
   grid-area: cover;
 }
-.book-title {
-  grid-area: title;
+.book-details {
+  margin-left: 10px;
+  grid-area: details;
 }
-.book-mark {
-  grid-area: mark;
+.book-details p {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.book-details h2 {
+  margin: 0;
+}
+.book-details h3 {
+  color: red;
+  margin: 0;
+}
+.book-author {
+  color: gray;
 }
 .book-note {
+  hyphens: auto;
+  font-family: "Roboto", sans-serif;
   grid-area: note;
 }
