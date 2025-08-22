@@ -1,6 +1,7 @@
 <%- include("partials/header.ejs"); %>
 
     <section id="cards">
+      <% if (locals.records) { %>
       <% records.forEach(record => { %>
       <div class="card-container">
         <div class="card-details">
@@ -16,6 +17,7 @@
         </div>
       </div>
       <% }); %>
+      <% } %>
     </section>
   </body>
 </html>
