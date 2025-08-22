@@ -22,9 +22,10 @@
 /* Card style */
 .card-container {
   margin: 0 10%;
+  margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 10px;
-  height: 40vh;
+  height: 30vh;
   display: grid;
   grid-template: 3fr 1fr 5fr / 0.5fr 2fr;
   grid-template-areas:

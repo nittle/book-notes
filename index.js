@@ -20,7 +20,9 @@ app.use(e.static("public"));
 
 app.get("/", async (req, res) => {
   const records = await getRecords();
-  res.render("index.ejs", { records: records });
+  res.render("index.ejs", {
+    records: records,
+  });
 });
 
 app.listen(port, () => {
