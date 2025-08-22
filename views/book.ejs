@@ -1,14 +1,20 @@
 <%- include("partials/header.ejs"); %>
 
-    <div class="book-container">
-        <div class="book-details">
-            <h2><%= record.title %> <span class="book-author">by <%= record.author %></span></h2>
-            <h3>My mark is <%= record.mark %> out of 10</h3>
-            <p><%= record.description %></p>
-        </div>
-        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/<%= record.isbn %>-L.jpg" alt="<%= record.title %> cover"/>
-        <p class="book-note"><%= record.note %></p>
-    </div>
+<div class="book-container">
+  <div class="book-details">
+    <h2>
+      <%= record.title %>
+      <span class="book-author">by <%= record.author %></span>
+    </h2>
+    <h3>My mark is <%= record.mark %> out of 10</h3>
+    <p><%= record.description %></p>
+  </div>
+  <img
+    class="book-cover"
+    src="https://covers.openlibrary.org/b/isbn/<%= record.isbn %>-L.jpg"
+    alt="<%= record.title %> cover"
+  />
+  <p class="book-note"><%= record.note %></p>
+</div>
 
-  </body>
-</html>
+<%- include("partials/footer.ejs"); %>
