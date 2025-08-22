@@ -1,0 +1,60 @@
+/* Header  */
+#header h2 {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  display: inline;
+}
+#header a {
+  text-decoration: none;
+  color: inherit;
+}
+#header hr {
+  color: black;
+}
+
+#header form {
+  float: right;
+}
+
+#header {
+  font-size: large;
+}
+
+/* Card style */
+.card-container {
+  margin: 0 10%;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 40vh;
+  display: grid;
+  grid-template: 3fr 1fr 5fr / 0.5fr 2fr;
+  grid-template-areas:
+    "title note"
+    "mark note"
+    "description note";
+}
+
+@layer {
+  .card-container > div {
+    border: 1px solid black;
+  }
+}
+.card-title {
+  border-top: 0;
+  border-left: 0;
+  grid-area: title;
+}
+.card-mark {
+  border-left: 0;
+  grid-area: mark;
+}
+.card-notes {
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
+  grid-area: note;
+}
+.card-description {
+  border-left: 0;
+  border-bottom: 0;
+  grid-area: description;
+}
