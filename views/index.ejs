@@ -3,11 +3,11 @@
     <section id="cards">
       <% records.forEach(record => { %>
       <div class="card-container">
+        <div class="card-details">
         <div class="card-title"><h2><%= record.title %></h2></div>
         <div class="card-mark"><h3>My mark is <%= record.mark %></h3></div>
-        <!-- <hr /> -->
         <div class="card-description"><p><%= record.description %></p></div>
-        <!-- <hr /> -->
+        </div>
         <div class="card-notes">
           <p>
             <%= record.note.slice(0, 999) %>
